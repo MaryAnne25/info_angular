@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { VeiculoCardComponent } from './veiculo-card/veiculo-card.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { AddVeiculoFormComponent } from './add-veiculo-form/add-veiculo-form.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 
@@ -12,8 +13,13 @@ import { AddVeiculoFormComponent } from './add-veiculo-form/add-veiculo-form.com
     PageHeaderComponent,
     AddVeiculoFormComponent
   ],
+  exports: [
+    PageHeaderComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule,
+    NgOptimizedImage
   ]
 })
 export class ComponentsModule { }
