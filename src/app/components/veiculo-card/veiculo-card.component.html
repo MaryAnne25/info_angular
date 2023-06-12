@@ -1,1 +1,20 @@
-<p>veiculo-card works!</p>
+<mat-card class="!bg-white !border-secondary !border-2">
+  <mat-card-header class="justify-between mb-2">
+    <mat-card-title>{{ veiculo?.modelo + ' ' + veiculo?.ano }}</mat-card-title>
+    <mat-card-subtitle class="!text-primary">{{ veiculo?.marca }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="!grid grid-rows-3 gap-y-1">
+    <div class="flex flex-col text-start">
+      <span class="font-medium text-main_gray">{{ 'VEICULO.RENAVAM' | translate }}</span>
+      <span class="">{{ veiculo?.renavam }}</span>
+    </div>
+    <div class="flex flex-col text-start">
+      <span class="font-medium text-main_gray">{{ 'VEICULO.CHASSI' | translate }}</span>
+      <span class="">{{ veiculo?.chassi }}</span>
+    </div>
+    <div class="flex flex-col text-start">
+      <span class="font-medium text-main_gray">{{ 'VEICULO.PLACA' | translate }}</span>
+      <span class="">{{ veiculo?.placa }}</span>
+    </div>
+  </mat-card-content>
+</mat-card>
