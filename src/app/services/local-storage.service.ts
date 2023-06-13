@@ -19,7 +19,7 @@ export class LocalStorageService {
   }
 
   get(key: string): any {
-    if (this.storage) {
+    if (this.storage && key != 'debug') {
       const item = this.storage.getItem(key);
       return JSON.parse(item ?? '');
     }
