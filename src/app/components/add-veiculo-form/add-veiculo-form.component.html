@@ -1,1 +1,63 @@
-<p>add-veiculo-form works!</p>
+<form [formGroup]="form.formGroup" class="flex flex-col mx-5">
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.MARCA' | translate }}</mat-label>
+    <mat-select formControlName="marca" (selectionChange)="onMarcaChange()">
+      <mat-option *ngFor="let marca of marcas" [value]="marca">
+        {{ marca }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.MODELO' | translate }}</mat-label>
+    <mat-select formControlName="modelo">
+      <mat-option *ngFor="let modelo of modelos" [value]="modelo">
+        {{ modelo }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.ANO' | translate }}</mat-label>
+    <input
+      matInput
+      formControlName="ano"
+      mask="0000"
+      [showMaskTyped]="true"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.PLACA' | translate }}</mat-label>
+    <input
+      matInput
+      formControlName="placa"
+      oninput="this.value = this.value.toUpperCase()"
+      mask="SSS-0000"
+      [showMaskTyped]="true"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.CHASSI' | translate }}</mat-label>
+    <input
+      matInput
+      formControlName="chassi"
+      oninput="this.value = this.value.toUpperCase()"
+      mask="SSS SSSSSS SS SS0000"
+      [showMaskTyped]="true"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="my-3">
+    <mat-label>{{ 'FORM.RENAVAM' | translate }}</mat-label>
+    <input
+      matInput
+      formControlName="renavam"
+      mask="0000000000-00"
+      [showMaskTyped]="true"
+    />
+  </mat-form-field>
+</form>
+
+

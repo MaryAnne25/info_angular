@@ -5,5 +5,15 @@
     "CHASSI": "Chassi",
     "PLACA": "Placa"
   },
-  "NOVO-VEICULO": "Novo veículo"
+  "NOVO-VEICULO": "Novo veículo",
+  "FORM": {
+    "CHASSI": "Chassi",
+    "RENAVAM": "Renavam",
+    "ANO": "Ano",
+    "PLACA": "Placa",
+    "MODELO": "Modelo",
+    "MARCA": "Marca",
+    "ENVIAR": "Enviar",
+    "CANCELAR": "Cancelar"
+  }
 }
