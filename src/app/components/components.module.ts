@@ -6,6 +6,8 @@ import { AddVeiculoFormComponent } from './add-veiculo-form/add-veiculo-form.com
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { TranslateModule } from '@ngx-translate/core';
+import { AddVeiculoButtonComponent } from './add-veiculo-button/add-veiculo-button.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -13,7 +15,8 @@ import { TranslateModule } from '@ngx-translate/core';
   declarations: [
     VeiculoCardComponent,
     PageHeaderComponent,
-    AddVeiculoFormComponent
+    AddVeiculoFormComponent,
+    AddVeiculoButtonComponent
   ],
   exports: [
     PageHeaderComponent,
@@ -24,7 +27,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatIconModule,
     NgOptimizedImage,
     MatCardModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    MatButtonModule
   ]
 })
 export class ComponentsModule { }

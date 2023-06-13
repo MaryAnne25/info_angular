@@ -7,9 +7,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PageHeaderComponent {
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-  }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
   goHome(): void {
-    this.router.navigate(['/veiculos'], { relativeTo: this.activatedRoute })
+    this.router.navigate(['/veiculos'], { relativeTo: this.activatedRoute });
+  }
+
+  get isHomePage(): boolean {
+    return this.router.url.includes('veiculos');
   }
 }
