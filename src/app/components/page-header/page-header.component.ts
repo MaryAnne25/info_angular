@@ -9,7 +9,9 @@ export class PageHeaderComponent {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
   goHome(): void {
-    this.router.navigate(['/veiculos'], { relativeTo: this.activatedRoute });
+    if(!this.router.url.includes('add-veiculo')){
+      this.router.navigate(['/veiculos'], { relativeTo: this.activatedRoute });
+    }
   }
 
   get isHomePage(): boolean {
