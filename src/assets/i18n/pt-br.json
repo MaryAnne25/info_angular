@@ -1,7 +1,9 @@
 {
+  "TITLE": "Info Veículos",
   "VEICULO": {
     "RENAVAM": "Renavam",
     "CHASSI": "Chassi",
     "PLACA": "Placa"
-  }
+  },
+  "NOVO-VEICULO": "Novo veículo"
 }
