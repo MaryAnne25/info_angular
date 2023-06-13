@@ -1,5 +1,13 @@
 <div class="grid lg:grid-cols-5 grid-cols-1 gap-3 m-5">
-  <ng-container *ngFor="let veiculo of veiculos">
-    <veiculo-card [veiculo]="veiculo"></veiculo-card>
+  <ng-container *ngIf="veiculos.length > 0; else noVeiculosPlaceholder">
+    <ng-container *ngFor="let veiculo of veiculos">
+      <veiculo-card [veiculo]="veiculo"></veiculo-card>
+    </ng-container>
   </ng-container>
 </div>
+
+<ng-template #noVeiculosPlaceholder>
+  <div class="col-span-5 text-center text-2xl mt-10">
+    <span class="text-main_gray">{{ 'ZERO-VEICULOS' | translate }}</span>
+  </div>
+</ng-template>
